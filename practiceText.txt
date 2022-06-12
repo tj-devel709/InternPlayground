@@ -1,0 +1,5 @@
+Hello!
+
+Just practicing GitHub Commands in the Terminal
+
+Leandra :)
