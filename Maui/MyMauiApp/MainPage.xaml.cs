@@ -14,9 +14,8 @@ public partial class MainPage : ContentPage
 	{
 		count += 5;
 		Rotation += 90;
-
-		if (count <= 100)
-        {
+		
+		if (count <= 100) {
 			CounterBtn.Text = $"Clicked {count} times";
 			Bot.RotateTo(Rotation);
 		}
