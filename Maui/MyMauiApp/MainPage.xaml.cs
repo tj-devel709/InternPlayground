@@ -2,7 +2,7 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	int count = 0, count2 = 0;
 
 	public MainPage()
 	{
@@ -18,5 +18,24 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+
+	private void OnCounterClicked2(object sender, EventArgs e)
+	{
+		count2++;
+
+		if (count2 == 1)
+		{
+			CounterBtn2.Text = $"No Functionality";
+		}
+		else
+		{
+			CounterBtn2.Text = $"No Functionality";
+
+		}
+
+		SemanticScreenReader.Announce(CounterBtn2.Text);
+
+	}
+
 }
 
