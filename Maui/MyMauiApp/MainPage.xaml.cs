@@ -3,7 +3,7 @@
 public partial class MainPage : ContentPage
 {
 	int count = 0;
-	int Rotation = 0;
+	int rotation = 0;
 
 	public MainPage()
 	{
@@ -13,11 +13,11 @@ public partial class MainPage : ContentPage
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
 		count += 5;
-		Rotation += 90;
+		rotation += 90;
 		
 		if (count <= 100) {
 			CounterBtn.Text = $"Clicked {count} times";
-			Bot.RotateTo(Rotation);
+			Bot.RotateTo(rotation);
 		}
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
