@@ -35,6 +35,13 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
+             <Button
+                x:Name="CounterBtn2"
+                IsEnabled="False"
+                Text="No Functionality"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Background="Green"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>
