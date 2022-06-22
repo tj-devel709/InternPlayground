@@ -9,12 +9,16 @@
             Padding="30,0" 
             VerticalOptions="Center">
 
-            <Label Text="Let's play TicTacToe" />
+            <Label Text="Let's play Tic-Tac-Toe"
+                   FontSize="50"
+                   HorizontalOptions="Center"/>
 
             <Button
                 Text="Reset"
                 Background="Purple"
                 Pressed="ResetBtn_Pressed"
+                HorizontalOptions="Center"
+                WidthRequest="400"
                 />
 
             <Grid BackgroundColor="black"

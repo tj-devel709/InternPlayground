@@ -22,13 +22,13 @@ public partial class MainPage : ContentPage
 
         if (marker != default(char))
         {
-            btn.Text = marker.ToString();
+            btn.Text = marker.ToString ();
             btn.TextColor = isFirstPlayer ? Colors.Black : Colors.Red;
             isFirstPlayer = !isFirstPlayer;
         }
 
         if (gameBoard.CheckWin ())
-            DisplayAlert ("Congrats!", "You won!", "Reset");
+            DisplayAlert ("Congrats!", "You won!", "Sweet!");
     }
 
     void TopLeftBtn_Pressed(System.Object sender, System.EventArgs e)
@@ -78,21 +78,32 @@ public partial class MainPage : ContentPage
 
     void ResetBtn_Pressed(System.Object sender, System.EventArgs e)
     {
-        gameBoard.EraseBoard ();
+        gameBoard.EraseBoard();
+        //gameBoard = new Board ();
 
-        //TopLeftBtn.Text = TopCenterBtn.Text = TopRightBtn.Text
-        //    = CenterLeftBtn.Text = CenterCenterBtn.Text = CenterRightBtn.Text
-        //    = BottomLeftBtn.Text = BottomCenterBtn.Text = BottomRightBtn.Text = String.Empty;
+        TopLeftBtn.Text = TopCenterBtn.Text = TopRightBtn.Text
+            = CenterLeftBtn.Text = CenterCenterBtn.Text = CenterRightBtn.Text
+            = BottomLeftBtn.Text = BottomCenterBtn.Text = BottomRightBtn.Text = String.Empty;
 
-        TopLeftBtn.Text = String.Empty;
-        TopCenterBtn.Text = String.Empty;
-        TopRightBtn.Text = String.Empty;
-        CenterLeftBtn.Text = String.Empty;
-        CenterCenterBtn.Text = String.Empty;
-        CenterRightBtn.Text = String.Empty;
-        BottomLeftBtn.Text = String.Empty;
-        BottomCenterBtn.Text = String.Empty;
-        BottomRightBtn.Text = String.Empty;
+        //TopLeftBtn.Text = String.Empty;
+        //TopCenterBtn.Text = String.Empty;
+        //TopRightBtn.Text = String.Empty;
+        //CenterLeftBtn.Text = String.Empty;
+        //CenterCenterBtn.Text = String.Empty;
+        //CenterRightBtn.Text = String.Empty;
+        //BottomLeftBtn.Text = String.Empty;
+        //BottomCenterBtn.Text = String.Empty;
+        //BottomRightBtn.Text = String.Empty;
+
+        //TopLeftBtn.Text = null;
+        //TopCenterBtn.Text = null;
+        //TopRightBtn.Text = null;
+        //CenterLeftBtn.Text = null;
+        //CenterCenterBtn.Text = null;
+        //CenterRightBtn.Text = null;
+        //BottomLeftBtn.Text = null;
+        //BottomCenterBtn.Text = null;
+        //BottomRightBtn.Text = null;
 
         isFirstPlayer = true;
     }

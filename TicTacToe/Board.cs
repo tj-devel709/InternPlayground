@@ -15,6 +15,7 @@ namespace TicTacToe
 			if (BoardArray[row, col] != default(char))
 				return default(char);
 
+			// called "ternary conditional operator"
 			var marker = isFirstPlayer ? 'X' : 'O';
 
 			BoardArray[row, col] = marker;
