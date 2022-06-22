@@ -3,7 +3,7 @@
 public partial class MainPage : ContentPage
 {
 	int count = 0, position = 0;
-	static char[] arr = { '0', '1', '2', '3', '4', '5', '6', '8' };
+	static char[] arr = { '0', '1', '2', '3', '4', '5', '6', '7','8' };
 
 	public MainPage()
 	{
@@ -19,8 +19,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 0;
-			//arr[position] = 'X';
+			position = 0;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -30,8 +30,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 0;
-			//arr[position] = '0';
+			position = 0;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -43,8 +43,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 1;
-			//arr[position] = 'X';
+			position = 1;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -54,8 +54,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 1;
-			//arr[position] = '0';
+			position = 1;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -68,8 +68,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 2;
-			//arr[position] = 'X';
+			position = 2;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -79,8 +79,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 2;
-			//arr[position] = '0';
+			position = 2;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -93,8 +93,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 3;
-			//arr[position] = 'X';
+			position = 3;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -104,8 +104,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 3;
-			//arr[position] = '0';
+			position = 3;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -118,8 +118,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 4;
-			//arr[position] = 'X';
+			position = 4;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -129,8 +129,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 4;
-			//arr[position] = '0';
+			position = 4;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -143,8 +143,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 5;
-			//arr[position] = 'X';
+			position = 5;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -154,8 +154,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 5;
-			//arr[position] = '0';
+			position = 5;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -168,8 +168,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 6;
-			//arr[position] = 'X';
+			position = 6;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -179,8 +179,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 6;
-			//arr[position] = '0';
+			position = 6;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -193,8 +193,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 7;
-			//arr[position] = 'X';
+			position = 7;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -204,8 +204,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 7;
-			//arr[position] = '0';
+			position = 7;
+			arr[position] = '0';
 			count++;
 		}
 	}
@@ -218,8 +218,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 8;
-			//arr[position] = 'X';
+			position = 8;
+			arr[position] = 'X';
 			count++;
 		}
 
@@ -229,8 +229,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			//position = 8;
-			//arr[position] = '0';
+			position = 8;
+			arr[position] = '0';
 			count++;
 		}
 	}
