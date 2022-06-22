@@ -30,16 +30,16 @@
                 </Grid.ColumnDefinitions>
 
                 <Button x:Name="TopLeftBtn" Pressed="TopLeftBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Button x:Name="TopCenterBtn" BackgroundColor="white" Grid.Row="0" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Button x:Name="TopRightBtn" BackgroundColor="white" Grid.Row="0" Grid.Column="2" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="TopCenterBtn" Pressed="TopCenterBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="TopRightBtn" Pressed="TopRightBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="2" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-                <Button x:Name="CenterLeftBtn" BackgroundColor="white" Grid.Row="1" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Button x:Name="CenterCenterBtn" BackgroundColor="white" Grid.Row="1" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Button x:Name="CenterRightBtn" BackgroundColor="white" Grid.Row="1" Grid.Column="2" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="CenterLeftBtn" Pressed="CenterLeftBtn_Pressed" BackgroundColor="white" Grid.Row="1" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="CenterCenterBtn" Pressed="CenterCenterBtn_Pressed" BackgroundColor="white" Grid.Row="1" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="CenterRightBtn" Pressed="CenterRightBtn_Pressed" BackgroundColor="white" Grid.Row="1" Grid.Column="2" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-                <Button x:Name="BottomLeftBtn" BackgroundColor="white" Grid.Row="2" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Button x:Name="BottomCenterBtn" BackgroundColor="white" Grid.Row="2" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
-                <Button x:Name="BottomRightBtn" BackgroundColor="white" Grid.Row="2" Grid.Column="2" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="BottomLeftBtn"  Pressed="BottomLeftBtn_Pressed" BackgroundColor="white" Grid.Row="2" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="BottomCenterBtn" Pressed="BottomCenterBtn_Pressed" BackgroundColor="white" Grid.Row="2" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button x:Name="BottomRightBtn" Pressed="BottomRightBtn_Pressed" BackgroundColor="white" Grid.Row="2" Grid.Column="2" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
 
             </Grid>
 
