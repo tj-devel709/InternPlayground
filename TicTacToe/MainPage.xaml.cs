@@ -10,6 +10,8 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
+	// TODO: Rachel help figure out bindings
+
 	// This is the Event Handler for the TopLeftButton Press
 	void TopLeftBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
