@@ -13,15 +13,14 @@ public partial class MainPage : ContentPage
 		//TopCenterBtn.Text = "Player 1";
 	}
 
-<<<<<<< HEAD
 	// TODO: Rachel help figure out bindings
 
 	// This is the Event Handler for the TopLeftButton Press
 	void TopLeftBtn_Pressed(System.Object sender, System.EventArgs e)
-=======
+	
 	private string winnerProperty;
 	public string WinnerProperty
->>>>>>> ce6b3dd97a42f364490259c731c4e31aead4ee71
+
 	{
 		get { return winnerProperty; }
 		set
