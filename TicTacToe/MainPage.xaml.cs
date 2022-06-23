@@ -9,6 +9,19 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+		WinnerProperty = "Something..";
+		//TopCenterBtn.Text = "Player 1";
+	}
+
+	private string winnerProperty;
+	public string WinnerProperty
+	{
+		get { return winnerProperty; }
+		set
+		{
+			winnerProperty = value;
+			OnPropertyChanged(nameof(WinnerProperty));
+		}
 	}
 
 	// This is the Event Handler for the TopLeftButton Press
@@ -76,7 +89,7 @@ public partial class MainPage : ContentPage
 	}
 
 	
-	public static void ButtonEvents(System.Object sender, System.EventArgs e, int count, int position){
+	public void ButtonEvents(System.Object sender, System.EventArgs e, int count, int position){
 		if (count % 2 == 0 && count < 9)
 		{
 			var btn = sender as Button;
@@ -84,7 +97,7 @@ public partial class MainPage : ContentPage
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
 			arr[position] = 'X';
-
+			WhoWon(count);
 			btn.IsEnabled = false;
 
 		}
@@ -102,7 +115,7 @@ public partial class MainPage : ContentPage
 	}
 	
 
-	public static void WhoWon(int count)
+	public void WhoWon(int count)
    {
 		HorizontalWin(count);
 		VerticalWin(count);
@@ -110,33 +123,32 @@ public partial class MainPage : ContentPage
 		
 	}
 
-	public static void HorizontalWin(int count){
+	public void HorizontalWin(int count){
 		if ((arr[0] == arr[1] && arr[1] == arr[2]) || (arr[3] == arr[4] && arr[4] == arr[5]) || (arr[6] == arr[7] && arr[7] == arr[8])){
 			Player(count);
 		}
 	}
-	public static void VerticalWin(int count){
+	public void VerticalWin(int count){
 		if ((arr[0] == arr[3] && arr[4] == arr[6]) || (arr[1] == arr[4] && arr[4] == arr[7]) || (arr[2] == arr[5] && arr[5] == arr[8])){
 			Player(count);
 		}
 	}
-	public static void DiagonalWin(int count){
+	public void DiagonalWin(int count){
 		if((arr[0] == arr[4] && arr[4] == arr[8]) || (arr[2] == arr[4] && arr[4] == arr[6])){
 			Player(count);
 		}
 	}
 
-	public static void Player(int count)
+	public void Player(int count)
 	{
-
-		// if (count % 2 == 0) {
-		// 	result.Text = " Player 1 won"!;
+		// TopCenterBtn.Text = "Player TJ";
 		
-		// }
-		// else {
-		// 	result.Text = "Player 2 won!";
-
-		// }
+		if (count % 2 == 0) {
+			WinnerProperty = "Player 1 won"!;
+		}
+		else {
+			WinnerProperty = "Player 2 won!";
+		}
 	}
 
 }

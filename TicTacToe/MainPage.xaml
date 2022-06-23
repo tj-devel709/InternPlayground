@@ -12,6 +12,7 @@
             <Label Text="Let's play TicTacToe" />
 
             <Label Text="Player 1: X and Player 2: O" FontSize="15" HorizontalOptions="Center"/>
+            <Label x:Name="result" Text="{Binding WinnerProperty}" TextColor ="White" FontSize="15" HorizontalOptions="Center" />
 
             <Grid BackgroundColor="black"
                   HeightRequest="600"
