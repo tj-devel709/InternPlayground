@@ -1,4 +1,5 @@
-﻿namespace TicTacToe;
+﻿
+namespace TicTacToe;
 
 public partial class MainPage : ContentPage
 {
@@ -8,221 +9,104 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+		WinnerProperty = "Something..";
+		//TopCenterBtn.Text = "Player 1";
 	}
 
+<<<<<<< HEAD
 	// TODO: Rachel help figure out bindings
 
 	// This is the Event Handler for the TopLeftButton Press
 	void TopLeftBtn_Pressed(System.Object sender, System.EventArgs e)
+=======
+	private string winnerProperty;
+	public string WinnerProperty
+>>>>>>> ce6b3dd97a42f364490259c731c4e31aead4ee71
 	{
-		if (count % 2 == 0 && count < 9)
+		get { return winnerProperty; }
+		set
 		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 0;
-			arr[position] = 'X';
-			count++;
+			winnerProperty = value;
+			OnPropertyChanged(nameof(WinnerProperty));
 		}
+	}
 
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 0;
-			arr[position] = '0';
-			count++;
-		}
+	// This is the Event Handler for the TopLeftButton Press
+	void TopLeftBtn_Pressed(System.Object sender, System.EventArgs e)
+	{
+		position = 0;
+		ButtonEvents(sender, e, count, position);
+		count++;
 	}
 	void TopCenterBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
-		if (count % 2 == 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 1;
-			arr[position] = 'X';
-			count++;
-		}
-
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 1;
-			arr[position] = '0';
-			count++;
-		}
+		position = 1;
+		ButtonEvents(sender, e, count, position);
+		count++;
 	}
 
 	void TopRightBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
-		if (count % 2 == 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 2;
-			arr[position] = 'X';
-			count++;
-		}
-
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 2;
-			arr[position] = '0';
-			count++;
-		}
+		position = 2;
+		ButtonEvents(sender, e, count, position);
+		count++;
 	}
 
 	void CenterLeftBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
-		if (count % 2 == 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 3;
-			arr[position] = 'X';
-			count++;
-		}
-
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 3;
-			arr[position] = '0';
-			count++;
-		}
+		position = 3;
+		ButtonEvents(sender, e, count, position);
+		count++;
 	}
 
 	void CenterCenterBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
-		if (count % 2 == 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 4;
-			arr[position] = 'X';
-			count++;
-		}
-
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 4;
-			arr[position] = '0';
-			count++;
-		}
+		position = 4;
+		ButtonEvents(sender, e, count, position);
+		count++;
 	}
 
 	void CenterRightBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
-		if (count % 2 == 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 5;
-			arr[position] = 'X';
-			count++;
-		}
-
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 5;
-			arr[position] = '0';
-			count++;
-		}
+		position = 5;
+		ButtonEvents(sender, e, count, position);
+		count++;
+	
 	}
 
 	void BottomLeftBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
-		if (count % 2 == 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 6;
-			arr[position] = 'X';
-			count++;
-		}
-
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 6;
-			arr[position] = '0';
-			count++;
-		}
+		position = 6;
+		ButtonEvents(sender, e, count, position);
+		count++;
 	}
 
 	void BottomCenterBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
-		if (count % 2 == 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "X";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 7;
-			arr[position] = 'X';
-			count++;
-		}
-
-		else if (count % 2 != 0 && count < 9)
-		{
-			var btn = sender as Button;
-			btn.Text = "0";
-			btn.TextColor = Colors.Black;
-			btn.FontSize = 84;
-			position = 7;
-			arr[position] = '0';
-			count++;
-		}
+		position = 7;
+		ButtonEvents(sender, e, count, position);
+		count++;
 	}
 
 	void BottomRightBtn_Pressed(System.Object sender, System.EventArgs e)
 	{
+		position = 8; 
+		ButtonEvents(sender, e, count, position);
+		count++;
+	}
+
+	
+	public void ButtonEvents(System.Object sender, System.EventArgs e, int count, int position){
 		if (count % 2 == 0 && count < 9)
 		{
 			var btn = sender as Button;
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			position = 8;
 			arr[position] = 'X';
-			count++;
+			WhoWon(count);
+			btn.IsEnabled = false;
+
 		}
 
 		else if (count % 2 != 0 && count < 9)
@@ -231,10 +115,56 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			position = 8;
 			arr[position] = '0';
-			count++;
+			WhoWon(count);
+			btn.IsEnabled = false;
+		}
+	}
+	
+
+	public void WhoWon(int count)
+   {
+		HorizontalWin(count);
+		VerticalWin(count);
+		DiagonalWin(count);
+		
+	}
+
+	public void HorizontalWin(int count){
+		if ((arr[0] == arr[1] && arr[1] == arr[2]) || (arr[3] == arr[4] && arr[4] == arr[5]) || (arr[6] == arr[7] && arr[7] == arr[8])){
+			Player(count);
+		}
+	}
+	public void VerticalWin(int count){
+		if ((arr[0] == arr[3] && arr[4] == arr[6]) || (arr[1] == arr[4] && arr[4] == arr[7]) || (arr[2] == arr[5] && arr[5] == arr[8])){
+			Player(count);
+		}
+	}
+	public void DiagonalWin(int count){
+		if((arr[0] == arr[4] && arr[4] == arr[8]) || (arr[2] == arr[4] && arr[4] == arr[6])){
+			Player(count);
+		}
+	}
+
+	public void Player(int count)
+	{
+		// TopCenterBtn.Text = "Player TJ";
+		
+		if (count % 2 == 0) {
+			WinnerProperty = "Player 1 won"!;
+		}
+		else {
+			WinnerProperty = "Player 2 won!";
 		}
 	}
 
 }
+/**
+ * 
+ * arr[0] arr[1] arr[2]
+ * 
+ * arr[3] arr[4] arr[5]
+ * 
+ * arr[6] arr[7] arr[8]
+ * 
+ */

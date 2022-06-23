@@ -11,6 +11,9 @@
 
             <Label Text="Let's play TicTacToe" />
 
+            <Label Text="Player 1: X and Player 2: O" FontSize="15" HorizontalOptions="Center"/>
+            <Label x:Name="result" Text="{Binding WinnerProperty}" TextColor ="White" FontSize="15" HorizontalOptions="Center" />
+
             <Grid BackgroundColor="black"
                   HeightRequest="600"
                   WidthRequest="600"
@@ -28,6 +31,8 @@
                     <ColumnDefinition Width="200"/>
                     <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
+
+                <!-- <Label Command="{Binding PlayerWon" /> -->
 
                 <Button x:Name="TopLeftBtn" Pressed="TopLeftBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <Button x:Name="TopCenterBtn" Pressed="TopCenterBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
