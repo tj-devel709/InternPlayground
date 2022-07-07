@@ -14,9 +14,6 @@ public partial class MainPage : ContentPage
 	}
 
 	// TODO: Rachel help figure out bindings
-
-	// This is the Event Handler for the TopLeftButton Press
-	void TopLeftBtn_Pressed(System.Object sender, System.EventArgs e)
 	
 	private string winnerProperty;
 	public string WinnerProperty
