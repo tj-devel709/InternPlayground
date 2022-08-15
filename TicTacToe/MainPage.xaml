@@ -34,7 +34,13 @@
 
                 <!-- <Label Command="{Binding PlayerWon" /> -->
 
-                <Button x:Name="TopLeftBtn" Pressed="TopLeftBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Button x:Name="TopLeftBtn" Pressed="TopLeftBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="0" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"
+                    BindingContext="{Binding BoardViewModel}"
+                   Command="{Binding TopLeftSquare.Command}" Text="{Binding TopLeftSquare.Text}"
+                   TextColor="{Binding TopLeftSquare.Text, Convert={StaticResource SquareTextToTextColor}}" />
+
+
                 <Button x:Name="TopCenterBtn" Pressed="TopCenterBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="1" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <Button x:Name="TopRightBtn" Pressed="TopRightBtn_Pressed" BackgroundColor="white" Grid.Row="0" Grid.Column="2" HeightRequest="190" WidthRequest="190" HorizontalOptions="Center" VerticalOptions="Center"/>
 

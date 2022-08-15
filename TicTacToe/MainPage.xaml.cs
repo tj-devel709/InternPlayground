@@ -1,31 +1,18 @@
-﻿
+﻿using TicTacToe.ViewModel;
+
 namespace TicTacToe;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0, position = 0;
-	static char[] arr = { '0', '1', '2', '3', '4', '5', '6', '7','8' };
+	TicTacToeViewModel _viewModel;
+
+    int count = 0, position = 0;
 
 	public MainPage()
 	{
 		InitializeComponent();
-		WinnerProperty = "Something..";
-		//TopCenterBtn.Text = "Player 1";
-	}
-
-	// TODO: Rachel help figure out bindings
-	
-	private string winnerProperty;
-	public string WinnerProperty
-
-	{
-		get { return winnerProperty; }
-		set
-		{
-			winnerProperty = value;
-			OnPropertyChanged(nameof(WinnerProperty));
-		}
-	}
+        BindingContext = _viewModel = new TicTacToeViewModel();
+    }
 
 	// This is the Event Handler for the TopLeftButton Press
 	void TopLeftBtn_Pressed(System.Object sender, System.EventArgs e)
@@ -99,8 +86,8 @@ public partial class MainPage : ContentPage
 			btn.Text = "X";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			arr[position] = 'X';
-			WhoWon(count);
+			_viewModel.UpdateArray('X', position);
+			_viewModel.WhoWon(count);
 			btn.IsEnabled = false;
 
 		}
@@ -111,56 +98,9 @@ public partial class MainPage : ContentPage
 			btn.Text = "0";
 			btn.TextColor = Colors.Black;
 			btn.FontSize = 84;
-			arr[position] = '0';
-			WhoWon(count);
+            _viewModel.UpdateArray('O', position);
+            _viewModel.WhoWon(count);
 			btn.IsEnabled = false;
 		}
 	}
-	
-
-	public void WhoWon(int count)
-   {
-		HorizontalWin(count);
-		VerticalWin(count);
-		DiagonalWin(count);
-		
-	}
-
-	public void HorizontalWin(int count){
-		if ((arr[0] == arr[1] && arr[1] == arr[2]) || (arr[3] == arr[4] && arr[4] == arr[5]) || (arr[6] == arr[7] && arr[7] == arr[8])){
-			Player(count);
-		}
-	}
-	public void VerticalWin(int count){
-		if ((arr[0] == arr[3] && arr[4] == arr[6]) || (arr[1] == arr[4] && arr[4] == arr[7]) || (arr[2] == arr[5] && arr[5] == arr[8])){
-			Player(count);
-		}
-	}
-	public void DiagonalWin(int count){
-		if((arr[0] == arr[4] && arr[4] == arr[8]) || (arr[2] == arr[4] && arr[4] == arr[6])){
-			Player(count);
-		}
-	}
-
-	public void Player(int count)
-	{
-		// TopCenterBtn.Text = "Player TJ";
-		
-		if (count % 2 == 0) {
-			WinnerProperty = "Player 1 won"!;
-		}
-		else {
-			WinnerProperty = "Player 2 won!";
-		}
-	}
-
 }
-/**
- * 
- * arr[0] arr[1] arr[2]
- * 
- * arr[3] arr[4] arr[5]
- * 
- * arr[6] arr[7] arr[8]
- * 
- */

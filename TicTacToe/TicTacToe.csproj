@@ -45,4 +45,8 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Model\NewFile1.txt" />
+	</ItemGroup>
+
 </Project>
